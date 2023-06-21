@@ -1,0 +1,249 @@
+let a='sece';
+const name='nandha';
+
+var x=100;
+{
+    var x=20;
+    console.log(x);
+}
+console.log(x);
+
+var n=1/0;
+console.log(n);
+var n='hello'/0;
+console.log(n);
+var n='10'+0;
+console.log(n);
+//string x int
+var n='hello'*8;
+console.log(n);
+//
+var n='10'*2;
+console.log(n);
+//bigint
+let b=10n;
+console.log(b, typeof b);
+//integer
+let c=10;
+console.log(typeof(c));
+//concatenation
+var e =190;
+var f=20;
+console.log('Addition of two numbers',e,'and',f,'is',e+f);
+//backtick operator
+console.log(`addition of two numbers
+${e} and ${f}
+is ${e+f}`);
+//string concatenation
+let str1='Tony';
+let str2='Stark';
+console.log("String Concatenation :",str1+str2);
+//undefined (It is not defined)
+var xtr;
+console.log(xtr);
+//null (null is empty)
+let obj = null;
+console.log(obj);
+//task
+const bool=true;
+console.log(sece);
+var sece='college';
+//
+var sece='college';
+console.log(sece);
+//symbol
+//object
+const user = {
+    name : 'samyuktha menon',
+    age : 27,
+    identification : 'very beautiful'
+
+};
+console.log(user);
+//inserting values
+user.profession='actress';
+console.log(user);
+//changing the value
+user.age=21;
+console.log(user);
+//delete the values
+delete user.age;
+console.log(user);
+
+//Object.freeze
+const clean = Object.freeze(  {
+    name : 'xyz',
+    age : 25
+});
+clean.school='ghz';
+console.log(clean);
+//printing the keys only
+console.log(Object.keys(user));
+
+//mutation
+const userx = {
+    name: 'sam',
+    age: 18,
+}
+const usery = userx;
+
+usery.age = 30;
+console.log(userx,usery);
+//spread operator
+const user1 = {
+    name: 'sam',
+    age: 18,
+}
+const user2 = {...user1};//spread
+
+user2.age = 30;
+console.log(user1,user2);
+//
+ 
+const details = {
+    address:{
+        street: 'second street',
+        city: 'coimbatore',
+    }
+}
+console.log(details.address.city);
+console.log(details.name);
+// ? (Optional Operator)
+const subash = {
+    city: 'coimbatore'
+}
+console.log(subash?.address?.city);
+//looping 
+//FOR-IN loop
+for (const key in details) {
+    console.log(key,details[key]);
+}
+
+//function
+
+//syntax
+//function function_name(variable_name1,variable_name2){
+    //return num1+num2;
+//}
+
+//calling  a function
+//console.log(function_name(variable1,variable2))
+
+function sum(num1,num2){
+    if(typeof num1 !== 'number' || typeof num2 !== 'number')
+    {
+        return "Invalid Number";
+    }
+    return num1+num2;
+}
+console.log(sum('hi',40));
+console.log(sum(10,20));
+//=== (it checks both value as well as datatype)
+//==  (it checks only value)
+console.log('0'==0);
+console.log('0'===0);
+//arrow function (syntax is only changed It works as like a function)
+const swa = (num1,num2) => num1+num2;
+console.log(swa(10,20));//it doesnot require return statement
+
+//
+(function tha(num1,num2){
+    if(typeof num1 !== 'number' || typeof num2 !== 'number')
+    {
+        console.log('Invalid number');
+    }
+    console.log(num1+num2);
+})(10,50);
+
+
+//Passng a function into a function is called higher order fuction
+
+const sub = (num1,num2) => num1 - num2;
+const mom =(num1,num2)  => num1 + num2;
+
+const calculator = (num1,num2,operation) =>{
+    return operation(num1,num2);
+}
+console.log(calculator(100,20,sub));
+console.log(calculator(100,20,mom));
+// here
+       //calculator - higher order function
+       //sum-callback function
+
+//Trim function and replace replaceAll
+let  str3  =  "    I am a rugged boy   ";
+let str4 = str3.trim();
+console.log(str4.replaceAll('g','o'));
+
+
+//Arrays
+
+var arr =[1,2,3,4,'Hello'];
+console.log(arr);
+//push
+arr.push(10);
+console.log(arr.pop(1));
+console.log(arr);
+//
+let arr5 = [
+    1,
+    undefined,
+    true,
+    null,
+    "123",
+    '4',
+    [6,25,2,3,4,5],
+    (num1)=>num1*5,
+    {a:1,b:2,c:3, say_hello:()=>"hello"}
+
+];
+//console.log(arr5[8].say_hello());
+
+for(key in arr5[8]){
+    console.log(key, arr5[8][key]);
+}
+//splice (It is destructive)
+let arr6 = [1,2,3,4,5];
+arr6.splice(5,0,6,7,8,9,10);
+console.log(arr6);
+arr6.splice(1,4,6,7,8,9,10); //here 
+console.log(arr6);
+
+//adding elements in the first position
+console.log(arr6.unshift(1,2,3));
+console.log(arr6);
+//deleting first position in array
+console.log(arr6.shift());
+
+//slice function(It is non destructive)
+var arr7=['sam','nayan','nazri','fazri'];
+console.log(arr7.slice(0,3));
+
+//split vs join
+let str8="samantha ruth prabhu";
+let str9=str8.split(' ');
+console.log(str9);
+//join
+console.log(str9.join(""));
+//
+let str10=[1,2,3,4, "sri", "eshwar", "college"]; //here this 1,2,3,4 are also converted as string
+console.log(str10.join(''));
+
+//charAt() function
+console.log(str8.charAt(5));
+//toUpperCase
+console.log(str8.toUpperCase());
+// toLowerCase
+let str11 = 'SAMANTHA';
+console.log(str11.toLowerCase());
+
+//BOSS CHALLENGE OF A DAY
+var names2 = "madhu akshaya priya ishwariya saranya";
+var arr9=names2.split(" ");
+console.log(arr9);
+for(var i=0;i<arr9.length;i++)
+{
+    arr9[i]=arr9[i].charAt(0).toUpperCase()+arr9[i].slice(1);
+}
+str12=arr9.join(' ');
+console.log(str12);
